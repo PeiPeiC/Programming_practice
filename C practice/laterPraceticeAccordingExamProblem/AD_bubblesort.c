@@ -7,23 +7,23 @@ void descending_bubble_sort(int dynArr[],int arrLen);
 int main ()
 {
 
-     // ¥Î¨ÓºŞ²z°ÊºA°O¾ĞÅéªº«ü¼Ğ
+     // ç”¨ä¾†ç®¡ç†å‹•æ…‹è¨˜æ†¶é«”çš„æŒ‡æ¨™
     int *dynArr;
-    // «ü©wªÅ¶¡¤j¤p
+    // æŒ‡å®šç©ºé–“å¤§å°
     int arrLen;
     printf("Please enter the input size N = ");
     scanf("%d",&arrLen);
-    // ¨ú±o°O¾ĞÅéªÅ¶¡
+    // å–å¾—è¨˜æ†¶é«”ç©ºé–“
     dynArr = malloc( arrLen * sizeof(int) );
      if( dynArr == NULL ) {
-    // µLªk¨ú±o°O¾ĞÅéªÅ¶¡
+    // ç„¡æ³•å–å¾—è¨˜æ†¶é«”ç©ºé–“
     fprintf(stderr, "Error: unable to allocate required memory\n");
     return 1;
     }else{
 
     printf("Please enter the data :");
 
-    // ¨Ï¥Î°ÊºA¨ú±oªº°O¾ĞÅéªÅ¶¡
+    // ä½¿ç”¨å‹•æ…‹å–å¾—çš„è¨˜æ†¶é«”ç©ºé–“
     int i;
     for (i = 0; i < arrLen; ++i) {
     scanf("%d",&dynArr[i]);
@@ -40,11 +40,11 @@ int main ()
     printf("Please enter A or D to decide ascending/descending sort:");
     scanf(" %c",&c);
     sort(c, dynArr,arrLen);
-    free(dynArr);// ÄÀ©ñ°O¾ĞÅéªÅ¶¡
+    free(dynArr);// é‡‹æ”¾è¨˜æ†¶é«”ç©ºé–“
 return 0;
 }
 
-void sort(char c, int dynArr[],int arrLen)
+void sort(char c, int dynArr[],int arrLen) //ä¾æ“šè¼¸å…¥å­—æ¯é¸æ“‡ä¸åŒçš„æ’åºæ–¹å¼
 {
 
     if (c=='A')
